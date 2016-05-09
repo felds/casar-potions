@@ -1,0 +1,36 @@
+.icomoon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url(sprite.svg);
+}
+.icomoon-facebook-with-circle {
+    width: 40px;
+    height: 40px;
+    background-position: 0 0;
+}
+.icomoon-google-with-circle {
+    width: 40px;
+    height: 40px;
+    background-position: -48px 0;
+}
+.icomoon-pinterest-with-circle {
+    width: 40px;
+    height: 40px;
+    background-position: -96px 0;
+}
+.icomoon-tumblr-with-circle {
+    width: 40px;
+    height: 40px;
+    background-position: -144px 0;
+}
+.icomoon-twitter-with-circle {
+    width: 40px;
+    height: 40px;
+    background-position: -192px 0;
+}
+.icomoon-search {
+    width: 40px;
+    height: 40px;
+    background-position: 0 -48px;
+}
+

@@ -19,13 +19,16 @@
         <![endif]-->
     </head>
     <body>
-        {% block body_wrapper %}
-            {% block body "" %}
-        {% endblock %}
+        {% include '_header.html.twig' %}
+        {#% include '_nav.html.twig' %#}
+        {% block body "" %}
+        {#% include '_footer.html.twig' %#}
 
         {% block javascripts %}
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
         {% endblock %}
+
+        {% include '_icons.html.twig' %}
     </body>
 </html>
