@@ -1,6 +1,6 @@
-# Casar/Potions<br>
+# Casar/Potions
 
-Este é um projeto de exemplo e foi construído como prova para o processo seletivo da empresa Casar.
+Este é um projeto de exemplo, construído para o processo seletivo da empresa Casar.
 
 Deve levar-se em consideração que nem todas as funcionalidades estão completas e/ou presentes por tratar-se apenas de um exemplo.
 
@@ -30,10 +30,6 @@ No diretório raiz do projeto, execute o comando:
 
 ```sh
 composer install
-# Cria o banco de dados
-php bin/console doctrine:database:create
-# Popula o banco de dados
-php bin/console doctrine:fixtures:
 ```
 
 ### Execução
@@ -43,8 +39,6 @@ No diretório raiz do projeto, execute o comando:
 ```sh
 php bin/console server:run
 ```
-
-
 
 [requirements]: http://symfony.com/doc/current/reference/requirements.html "Requerimentos do Symfony 3"
 [composer-installation]: https://getcomposer.org/doc/00-intro.md#globally "Como instalar o composer de forma global"
