@@ -1,0 +1,96 @@
+.mobile-header {
+    position: fixed;
+    top: 0;
+    left: 0; right: 0;
+    z-index: 9999;
+}
+.mobile-header-top-bar {
+    position: absolute;
+    top: 0;
+    left: 0; right: 0;
+    height: 4.5rem;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+.mobile-header-nav-toggle {
+    flex: 0;
+    padding: 1.5rem;
+    a {
+        display: block;
+        width: 2rem;
+        height: 1.75rem;
+        color: inherit;
+        background-image: linear-gradient(
+            to bottom,
+            $brand-primary 0%, $brand-primary 20%,
+            transparent 20%, transparent 40%,
+            $brand-primary 40%, $brand-primary 60%,
+            transparent 60%, transparent 80%,
+            $brand-primary 80%, $brand-primary 100%
+        );
+    }
+    &.active {
+        background: $brand-primary;
+        a {
+            background-image: linear-gradient(
+            to bottom,
+            white 0%, white 20%,
+            transparent 20%, transparent 40%,
+            white 40%, white 60%,
+            transparent 60%, transparent 80%,
+            white 80%, white 100%
+            );
+        }
+    }
+}
+.mobile-header-logo {
+    flex: 1;
+    padding: .5rem;
+    text-align: center;
+    img {
+        max-width: 100%;
+        max-height: 3rem;
+    }
+}
+.mobile-header-cart {
+    flex: 0;
+    padding: 1.5rem;
+}
+
+
+
+.mobile-header-menu-container {
+    position: absolute;
+    top: 4.5rem;
+    width: 100vw;
+    height: calc(100vh - 4.5rem);
+    overflow-y: auto;
+    background: rgba(white, .75);
+}
+.mobile-header-menu,
+.mobile-header-user,
+{
+    background: $brand-primary;
+    a {
+        @include a-unstyled;
+        font-style: italic;
+        color: white;
+    }
+}
+.mobile-header-menu {
+    a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid mix(white, $brand-primary, 25);
+    }
+}
+.mobile-header-user {
+    padding: 3rem;
+    text-align: center;
+    color: mix($brand-primary, white, 50);
+    a {
+        color: white;
+        padding: .75rem 1rem;
+    }
+}

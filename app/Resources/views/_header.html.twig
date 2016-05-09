@@ -1,24 +1,54 @@
-<header class="header">
+<header class="header hidden-sm-down">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-xs-12 col-md-4">
                 <div class="header-logo">
                     <a href="{{ path('homepage') }}">
-                        <img src="//placehold.it/240x45" alt="Potions shop" />
+                        <img src="{{ asset('assets/images/logo.png') }}" alt="Potions shop" />
                     </a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-xs-12 col-md-4">
                 <form class="header-search" action="#" method="GET">
                     <label for="search-q" class="sr-only">Buscar</label>
                     <input type="search" class="form-control" name="q" id="serarch-q" placeholder="Search our stock" />
                     <button type="submit" class="btn btn-link"><svg class="icon"><use xlink:href="#icomoon-search"></use></svg></button>
                 </form>
             </div>
-            <div class="col-md-4">
+            <div class="col-xs-12 col-md-4">
                 <div class="header-cart">
                 </div>
             </div>
         </div>
     </div>
 </header>
+<div class="mobile-header hidden-sm-up">
+    <div class="mobile-header-content">
+        <header class="mobile-header-top-bar">
+            <div class="mobile-header-nav-toggle">
+                <a href="#"></a>
+            </div>
+            <div class="mobile-header-logo">
+                <a href="{{ path('homepage') }}">
+                    <img src="{{ asset('assets/images/logo.png') }}" alt="Potions shop" />
+                </a>
+            </div>
+            <a href="#" class="mobile-header-cart">CART</a>
+        </header>
+        <div class="mobile-header-menu-container" hidden>
+            <nav class="mobile-header-menu">
+                <a href="#">Potions</a>
+                <a href="#">Ingredients</a>
+                <a href="#">Books</a>
+                <a href="#">Supplies</a>
+                <a href="#">Charms</a>
+                <a href="#">Clearance!</a>
+            </nav>
+            <div class="mobile-header-user">
+                <a href=#">Sign In</a>
+                or
+                <a href=#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -5,13 +5,11 @@
     overflow: hidden;
 }
 .footer-links {
+    display: none;
     margin: 0 -.25rem 2rem;
     font-size: 1.2rem;
     font-family: $font-family-condensed;
     text-transform: uppercase;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     color: $brand-attention;
     > * {
         padding: 0 .25rem;
@@ -22,7 +20,10 @@
 }
 .footer-social {
     margin-bottom: 2rem;
+    padding: 0 2rem;
     color: $brand-primary;
+    display: flex;
+    justify-content: space-around;
     .icon {
         width: 2rem;
         height: 2rem;
@@ -34,5 +35,20 @@
 }
 .footer-copyright {
     font-family: $font-family-sans-serif;
+    text-align: center;
     font-weight: 300;
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .footer-links {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    .footer-social {
+        padding: 0;
+        display: block
+    }
+    .footer-copyright {
+        text-align: left;
+    }
 }
