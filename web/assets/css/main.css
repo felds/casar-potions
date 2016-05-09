@@ -5056,6 +5056,9 @@ a.bg-danger:focus, a.bg-danger:hover {
     width: 2rem;
     height: 2rem;
     margin-right: 1rem; }
+  .footer-social a {
+    text-decoration: none;
+    color: inherit; }
 
 .footer-copyright {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

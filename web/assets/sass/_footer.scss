@@ -28,6 +28,9 @@
         height: 2rem;
         margin-right: 1rem;
     }
+    a {
+        @include a-unstyled;
+    }
 }
 .footer-copyright {
     font-family: $font-family-sans-serif;
