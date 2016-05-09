@@ -2,18 +2,26 @@
 $enable-flex: true;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-serif;
+$brand-primary: #523468;
+$brand-attention: #d73a1e;
+
 
 // custom vars
-$color-nav: #523468;
+$color-nav: $brand-primary;
+$color-footer: #e6e6e6;
 
-
-
+// Bootstrap
 @import 'bootstrap';
+
+// Custom elements
+@import 'footer';
 @import 'header';
 @import 'nav';
 
-
-
+// Hacks
+.btn-attention {
+  @include button-variant(white, $brand-attention, $brand-attention);
+}
 .icon {
     display: inline-block;
     height: 1rem;
