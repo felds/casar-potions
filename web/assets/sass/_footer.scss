@@ -1,32 +1,35 @@
 .footer {
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 2rem;
     background-color: $color-footer;
     color: $body-color;
+    overflow: hidden;
 }
-
-.newsletter {
-    background-color: white;
-    margin: 0 -2rem;
-    padding: 2rem;
-    border-radius: 0 0 .25rem .25rem;
+.footer-links {
+    margin: 0 -.25rem 2rem;
+    font-size: 1.2rem;
+    font-family: $font-family-condensed;
+    text-transform: uppercase;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: $brand-attention;
+    > * {
+        padding: 0 .25rem;
+    }
+    a {
+        @include a-unstyled;
+    }
 }
-.newsletter-title {
-    font-style: italic;
-    margin-bottom: 1rem;
+.footer-social {
+    margin-bottom: 2rem;
+    color: $brand-primary;
+    .icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1rem;
+    }
 }
-.newsletter-description {
+.footer-copyright {
     font-family: $font-family-sans-serif;
     font-weight: 300;
-    margin-bottom: 1rem;
-}
-.newsletter-form {
-    display: flex;
-    margin: 0 -.25rem;
-    > * {
-        margin: 0 .25rem;
-    }
-    .btn {
-        text-transform: uppercase;
-        font-family: $font-family-sans-serif;
-    }
 }

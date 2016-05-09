@@ -5021,36 +5021,45 @@ a.bg-danger:focus, a.bg-danger:hover {
     display: none !important; } }
 
 .footer {
-  padding: 2rem 0 4rem;
+  padding: 2rem 0 2rem;
   background-color: #e6e6e6;
-  color: #373a3c; }
+  color: #373a3c;
+  overflow: hidden; }
 
-.newsletter {
-  background-color: white;
-  margin: 0 -2rem;
-  padding: 2rem;
-  border-radius: 0 0 .25rem .25rem; }
-
-.newsletter-title {
-  font-style: italic;
-  margin-bottom: 1rem; }
-
-.newsletter-description {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  margin-bottom: 1rem; }
-
-.newsletter-form {
+.footer-links {
+  margin: 0 -.25rem 2rem;
+  font-size: 1.2rem;
+  font-family: "HelveticaNeue-CondensedBold", "impact";
+  text-transform: uppercase;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 -.25rem; }
-  .newsletter-form > * {
-    margin: 0 .25rem; }
-  .newsletter-form .btn {
-    text-transform: uppercase;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #d73a1e; }
+  .footer-links > * {
+    padding: 0 .25rem; }
+  .footer-links a {
+    text-decoration: none;
+    color: inherit; }
+
+.footer-social {
+  margin-bottom: 2rem;
+  color: #523468; }
+  .footer-social .icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem; }
+
+.footer-copyright {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300; }
 
 .header {
   margin: 2rem 0; }
@@ -5105,6 +5114,49 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .nav-user {
   float: right; }
+
+.newsletter {
+  margin: 0 0 2rem;
+  padding: 2rem;
+  border-radius: 0 0 .25rem .25rem;
+  background-color: white; }
+
+.newsletter-title {
+  font-style: italic;
+  margin-bottom: 1rem; }
+
+.newsletter-description {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 1rem; }
+
+.newsletter-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 -.25rem; }
+  .newsletter-form > * {
+    margin: 0 .25rem; }
+  .newsletter-form .btn {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+    text-transform: uppercase;
+    font-family: "HelveticaNeue-CondensedBold", "impact"; }
+  @media (min-width: 768px) {
+    .newsletter-form {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .btn-attention {
   color: white;

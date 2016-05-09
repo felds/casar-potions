@@ -1,0 +1,31 @@
+.newsletter {
+    margin: 0 0 2rem;
+    padding: 2rem;
+    border-radius: 0 0 .25rem .25rem;
+    background-color: white;
+}
+.newsletter-title {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+.newsletter-description {
+    font-family: $font-family-sans-serif;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 -.25rem;
+    > * {
+        margin: 0 .25rem;
+    }
+    .btn {
+        flex: 0;
+        text-transform: uppercase;
+        font-family: $font-family-condensed;
+    }
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        flex-direction: row;
+    }
+}

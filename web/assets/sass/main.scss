@@ -2,9 +2,9 @@
 $enable-flex: true;
 $font-family-serif: Georgia, "Times New Roman", Times, serif;
 $font-family-base: $font-family-serif;
+$font-family-condensed: 'HelveticaNeue-CondensedBold', 'impact';
 $brand-primary: #523468;
 $brand-attention: #d73a1e;
-
 
 // custom vars
 $color-nav: $brand-primary;
@@ -13,10 +13,17 @@ $color-footer: #e6e6e6;
 // Bootstrap
 @import 'bootstrap';
 
+// Custom mixins
+@mixin a-unstyled {
+    text-decoration: none;
+    color: inherit;
+}
+
 // Custom elements
 @import 'footer';
 @import 'header';
 @import 'nav';
+@import 'newsletter';
 
 // Hacks
 .btn-attention {
