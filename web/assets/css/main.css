@@ -257,7 +257,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 1rem;
   line-height: 1.5;
   color: #373a3c;
@@ -4191,7 +4191,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -4270,7 +4270,7 @@ button.close {
   display: block;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5051,6 +5051,28 @@ a.bg-danger:focus, a.bg-danger:hover {
     left: 0;
     padding: 6px 12px;
     color: crimson; }
+
+.nav {
+  overflow: hidden;
+  background-color: #523468;
+  color: #a99ab4; }
+  .nav a {
+    text-decoration: none;
+    color: inherit;
+    color: white;
+    display: inline-block;
+    padding: .75rem 1rem;
+    margin: .5rem;
+    font-style: italic;
+    border-radius: .5rem; }
+    .nav a:hover, .nav a:focus {
+      background-color: rgba(0, 0, 0, 0.2); }
+
+.nav-main {
+  float: left; }
+
+.nav-user {
+  float: right; }
 
 .icon {
   display: inline-block;

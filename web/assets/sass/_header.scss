@@ -1,0 +1,27 @@
+.header {
+    margin: 2rem 0;
+
+    [class^="col-"] {
+        display: flex;
+        align-items: center;
+        > * { flex: 1 }
+    }
+}
+.header-logo {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.header-search {
+    position: relative;
+    .form-control {
+        padding-left: 40px;
+    }
+    button[type=submit] {
+        position: absolute;
+        top: 0; left: 0;
+        padding: 6px 12px;
+        color: crimson;
+    }
+}

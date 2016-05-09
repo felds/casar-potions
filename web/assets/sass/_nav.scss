@@ -1,0 +1,27 @@
+@mixin a-unstyled {
+    text-decoration: none;
+    color: inherit;
+}
+.nav {
+    overflow: hidden;
+    background-color: $color-nav;
+    color: mix($color-nav, white, 50);
+    a {
+        @include a-unstyled;
+        color: white;
+        display: inline-block;
+        padding: .75rem 1rem;
+        margin: .5rem;
+        font-style: italic;
+        border-radius: .5rem;
+        &:hover, &:focus {
+            background-color: rgba(black, .2);
+        }
+    }
+}
+.nav-main {
+    float: left;
+}
+.nav-user {
+    float: right;
+}
