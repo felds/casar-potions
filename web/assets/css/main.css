@@ -5205,6 +5205,13 @@ a.bg-danger:focus, a.bg-danger:hover {
     color: white;
     padding: .75rem 1rem; }
 
+body {
+  padding-top: 4rem; }
+
+@media (min-width: 768px) {
+  body {
+    padding-top: 0; } }
+
 .nav {
   overflow: hidden;
   background-color: #523468;
