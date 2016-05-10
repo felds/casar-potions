@@ -20,7 +20,7 @@ Para rodar o projeto, é necessário que o computador [preencha os requisitos do
 Faça o clone do projeto no seu computador:
 
 ```sh
-git clone https://felds@bitbucket.org/felds/casar-potions.git
+git clone https://github.com/felds/casar-potions.git
 ```
 
 
@@ -40,6 +40,10 @@ No diretório raiz do projeto, execute o comando:
 php bin/console server:run
 ```
 
+O site está disponível [neste link][test-site].
+
+
 [requirements]: http://symfony.com/doc/current/reference/requirements.html "Requerimentos do Symfony 3"
 [composer-installation]: https://getcomposer.org/doc/00-intro.md#globally "Como instalar o composer de forma global"
+[test-site]: http://127.0.0.1:8000
 
