@@ -1,0 +1,15 @@
+.product {
+    margin-bottom: 4rem;
+    img {
+        max-width: 100%;
+    }
+}
+.product-text {
+    text-align: center;
+}
+.product-name {
+    font-weight: bolder;
+}
+.product-price {
+    color: $brand-attention;
+}

@@ -25,8 +25,15 @@ $color-footer: #e6e6e6;
 @import 'mobile-header';
 @import 'nav';
 @import 'newsletter';
+@import 'product';
 
 // Hacks
+.content {
+    padding: 2rem 0;
+}
+h1, h2, h3, h4 {
+    margin-bottom: 2rem;
+}
 .btn-attention {
   @include button-variant(white, $brand-attention, $brand-attention);
 }
@@ -37,4 +44,7 @@ $color-footer: #e6e6e6;
     fill: currentColor;
     margin-bottom: -.125rem;
     margin-right: .25rem;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
 }

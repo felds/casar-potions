@@ -1,4 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+    <script>
+        angular
+            .module('Main', [])
+            .controller('ProductsController', function ($scope, $http) {
+                $scope.products = {};
+
+                $http.get('/api/potion/')
+                    .then(function (response) {
+                        $scope.products = response.data.potions;
+                        console.log($scope.products);
+                    })
+                ;
+
+            })
+        ;
+
+    </script>
 {% endblock %}
+
+{% block body %}
+    <div class="content">
+        <div class="container">
+            <h2>Potions</h2>
+            {% verbatim %}
+                <div class="products" ng-controller="ProductsController">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-4" ng-repeat="product in products" ng-cloak>
+                            <div class="product">
+                                <div class="product-image">
+                                    <img src="/assets/images/products/{{ product.image }}" />
+                                </div>
+                                <div class="product-text">
+                                    <span class="product-name">{{ product.name }}</span>
+                                    -
+                                    <span class="product-price">$ {{ product.price }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endverbatim %}
+        </div>
+    </div>
+{% endblock %}
+

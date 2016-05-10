@@ -5278,6 +5278,26 @@ body {
         -ms-flex-direction: row;
             flex-direction: row; } }
 
+.product {
+  margin-bottom: 4rem; }
+  .product img {
+    max-width: 100%; }
+
+.product-text {
+  text-align: center; }
+
+.product-name {
+  font-weight: bolder; }
+
+.product-price {
+  color: #d73a1e; }
+
+.content {
+  padding: 2rem 0; }
+
+h1, h2, h3, h4 {
+  margin-bottom: 2rem; }
+
 .btn-attention {
   color: white;
   background-color: #d73a1e;
@@ -5317,3 +5337,6 @@ body {
   fill: currentColor;
   margin-bottom: -.125rem;
   margin-right: .25rem; }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important; }
