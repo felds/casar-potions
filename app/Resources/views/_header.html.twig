@@ -17,6 +17,14 @@
             </div>
             <div class="col-xs-12 col-md-4">
                 <div class="header-cart">
+                    <div class="header-cart-ad">
+                        <span class="header-cart-ad-big">Free shipping</span><br>
+                        <span class="header-cart-ad-small">on orders over $50</span>
+                    </div>
+                    {% verbatim %}<div class="header-cart-icon">
+                        <span class="header-cart-title">BAG:</span>
+                        <span class="header-cart-total" ng-cloak>&nbsp;{{ getCartTotalItems() }} ($ {{ getCartTotal().toLocaleString() }})</span><br>
+                    </div>{% endverbatim %}
                 </div>
             </div>
         </div>

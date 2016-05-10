@@ -25,3 +25,34 @@
         color: $brand-attention;
     }
 }
+
+
+
+.header-cart {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.header-cart-ad {
+    color: $brand-attention;
+    font-style: italic;
+    margin-right: 3rem;
+}
+.header-cart-ad-big {
+    font-size: 130%;
+}
+.header-cart-icon {
+    display: flex;
+    align-items: center;
+    min-height: 39px;
+    background: transparent url('../images/cart.png') no-repeat scroll left center;
+    padding-left: 39px;
+}
+.header-cart-title {
+    font-family: $font-family-condensed;
+    color: gray;
+}
+.header-cart-total {
+    font-family: $font-family-condensed;
+    color: $brand-attention;
+}

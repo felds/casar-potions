@@ -18,7 +18,7 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-    <body>
+    <body ng-controller="ProductsController">
         {% include '_header.html.twig' %}
         {% include '_nav.html.twig' %}
         {% block body "" %}
@@ -29,6 +29,7 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
             <script src="{{ asset('assets/js/mobile-header-menu.js') }}"></script>
+            <script src="{{ asset('assets/js/ng-app.js') }}"></script>
         {% endblock %}
 
         {% include '_icons.html.twig' %}

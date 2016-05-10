@@ -1,61 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block javascripts %}
-    {{ parent() }}
-    <script>
-        angular
-            .module('Main', [])
-            .controller('ProductsController', function ($scope, $http) {
-                $scope.products = {};
-                $scope.cart = {};
-
-                $http.get('/api/potion/')
-                    .then(function (response) {
-                        $scope.products = response.data.potions;
-                    })
-                ;
-
-
-                function getQuantity(product) {
-                    if ($scope.cart.hasOwnProperty(product.id)) {
-                        return $scope.cart[product.id];
-                    }
-                    return 0;
-                }
-                function getCartTotal() {
-                    return Object.keys($scope.cart).reduce(function (carry, i) {
-                        return carry + $scope.cart[i];
-                    }, 0);
-                }
-                function changeQuantity(product, f) {
-                    var quantity = f(getQuantity(product));
-                    if (quantity < 0) quantity = 0;
-                    setQuantity(product, quantity);
-                }
-                function setQuantity(product, quantity) {
-                    $scope.cart[product.id] = quantity;
-                }
-
-
-                $scope.addProduct = function (product) {
-                    changeQuantity(product, function (q) { return q + 1 });
-                };
-                $scope.removeProduct = function (product) {
-                    changeQuantity(product, function (q) { return q - 1 });
-                };
-                $scope.getQuantity = getQuantity;
-                $scope.getCartTotal = getCartTotal;
-            })
-        ;
-    </script>
-{% endblock %}
-
 {% block body %}
     <div class="content">
         <div class="container">
             <h2>Potions</h2>
             {% verbatim %}
-                <div class="products" ng-controller="ProductsController">
+                <div class="products">
                     <div class="row">
                         <div class="col-xs-6 col-md-4" ng-repeat="product in products" ng-cloak>
                             <div class="product">
