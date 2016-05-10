@@ -2,23 +2,51 @@
 
 {% block javascripts %}
     {{ parent() }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
     <script>
         angular
             .module('Main', [])
             .controller('ProductsController', function ($scope, $http) {
                 $scope.products = {};
+                $scope.cart = {};
 
                 $http.get('/api/potion/')
                     .then(function (response) {
                         $scope.products = response.data.potions;
-                        console.log($scope.products);
                     })
                 ;
 
+
+                function getQuantity(product) {
+                    if ($scope.cart.hasOwnProperty(product.id)) {
+                        return $scope.cart[product.id];
+                    }
+                    return 0;
+                }
+                function getCartTotal() {
+                    return Object.keys($scope.cart).reduce(function (carry, i) {
+                        return carry + $scope.cart[i];
+                    }, 0);
+                }
+                function changeQuantity(product, f) {
+                    var quantity = f(getQuantity(product));
+                    if (quantity < 0) quantity = 0;
+                    setQuantity(product, quantity);
+                }
+                function setQuantity(product, quantity) {
+                    $scope.cart[product.id] = quantity;
+                }
+
+
+                $scope.addProduct = function (product) {
+                    changeQuantity(product, function (q) { return q + 1 });
+                };
+                $scope.removeProduct = function (product) {
+                    changeQuantity(product, function (q) { return q - 1 });
+                };
+                $scope.getQuantity = getQuantity;
+                $scope.getCartTotal = getCartTotal;
             })
         ;
-
     </script>
 {% endblock %}
 
@@ -32,12 +60,19 @@
                         <div class="col-xs-6 col-md-4" ng-repeat="product in products" ng-cloak>
                             <div class="product">
                                 <div class="product-image">
-                                    <img src="/assets/images/products/{{ product.image }}" />
+                                    <img ng-src="/assets/images/products/{{ product.image }}" />
                                 </div>
                                 <div class="product-text">
                                     <span class="product-name">{{ product.name }}</span>
                                     -
                                     <span class="product-price">$ {{ product.price }}</span>
+                                    <div class="product-actions">
+                                        <div class="btn-group btn-group-sm" role="group">
+                                            <button type="button" class="btn btn-primary" ng-click="removeProduct(product)">-</button>
+                                            <button type="button" class="btn btn-secondary" disabled>{{ getQuantity(product) }}</button>
+                                            <button type="button" class="btn btn-primary" ng-click="addProduct(product)">+</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
