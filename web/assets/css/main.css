@@ -5279,7 +5279,7 @@ body {
             flex-direction: row; } }
 
 .product {
-  margin-bottom: 4rem; }
+  margin: 2rem 0; }
   .product img {
     max-width: 100%; }
 
@@ -5293,7 +5293,7 @@ body {
   color: #d73a1e; }
 
 .content {
-  padding: 2rem 0; }
+  padding: 2rem 0 4rem; }
 
 h1, h2, h3, h4 {
   margin-bottom: 2rem; }
