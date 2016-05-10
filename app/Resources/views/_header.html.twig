@@ -41,7 +41,12 @@
                     <img src="{{ asset('assets/images/logo.png') }}" alt="Potions shop" />
                 </a>
             </div>
-            <a href="#" class="mobile-header-cart">CART</a>
+            <a href="#" class="mobile-header-cart">
+                {% verbatim %}<div class="header-cart-icon">
+                    <span class="header-cart-title">BAG:</span><br>
+                    <span class="header-cart-total" ng-cloak>&nbsp;{{ getCartTotalItems() }} ($ {{ getCartTotal().toLocaleString() }})</span><br>
+                </div>{% endverbatim %}
+            </a>
         </header>
         <div class="mobile-header-menu-container" hidden>
             <nav class="mobile-header-menu">

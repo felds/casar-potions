@@ -5137,13 +5137,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   font-size: 130%; }
 
 .header-cart-icon {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
+              -ms-grid-row-align: center;
           align-items: center;
   min-height: 39px;
   background: transparent url("../images/cart.png") no-repeat scroll left center;
@@ -5155,7 +5152,8 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 .header-cart-total {
   font-family: "HelveticaNeue-CondensedBold", "impact";
-  color: #d73a1e; }
+  color: #d73a1e;
+  white-space: nowrap; }
 
 .mobile-header {
   position: fixed;

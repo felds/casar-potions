@@ -42,7 +42,6 @@
     font-size: 130%;
 }
 .header-cart-icon {
-    display: flex;
     align-items: center;
     min-height: 39px;
     background: transparent url('../images/cart.png') no-repeat scroll left center;
@@ -55,4 +54,5 @@
 .header-cart-total {
     font-family: $font-family-condensed;
     color: $brand-attention;
+    white-space: nowrap;
 }
